@@ -12,24 +12,29 @@ We'd like to propose to "get SDL out of the container" and take the integration 
 
 ## Motivation
 
-Describe the problems that this proposal seeks to address. If the problem is that some common pattern is currently hard to express, show how one can currently get a similar effect and describe its drawbacks. If it's completely new functionality that cannot be emulated, motivate why this new functionality would help SDL mobile developers or OEMs provide users with useful functionality.
-
-## Proposed solution
-
-
 One important difference between a CarPlay-like approach and SDL lies in SDL's ability to actually integrate with the host IVI system. Instead of just providing access to the full screen or a part of it, SDL is an integrated part of the IVI's feature set.
 
 Currently, however, "apps" are still the main entry point to functionality, meaning the user first has to select the app from the apps list and then trigger a function from within the "app's area" within the HMI. 
 
 We'd like to propose to "get SDL out of the container" and integrate with the host IVI system even further. This could be considered a paradigm shift from an "apps-based approach" to a "function-based approach".
 
+It should be possible to attach an apps' functionality to appropriate areas within the HMI, for example:
+
+1)	a weather app could show its data (temperature and weather condition) in a standard "weather widget" without the user having to trigger the app. Wherever the widget is placed, the content would be visible.
+2)	common functionality of certain apps could be tied to central HMI elements, e.g. a "Help" button tied to a function of an "Owners' app" could be placed somewhere centrally in the HMI.
+
+
+## Proposed solution
+
+
+
 ## Potential downsides
 
-Describe any potential downsides or known objections to the course of action presented in this proposal, then provide counter-arguments to these objections. You should anticipate possible objections that may come up in review and provide an initial response here. Explain why the positives of the proposal outweigh the downsides, or why the downside under discussion is not a large enough issue to prevent the proposal from being accepted.
+There is a risk of increasing overall complexity.
 
 ## Impact on existing code
 
-Describe the impact that this change will have on existing code. Will some SDL integrations stop compiling due to this change? Will applications still compile but produce different behavior than they used to? Is it possible to migrate existing SDL code to use a new feature or API automatically?
+It should be possible to just add the new feature without altering exisiting ones. Headunits and apps that don't use the new approach should not be impacted by it.
 
 ## Alternatives considered
 
