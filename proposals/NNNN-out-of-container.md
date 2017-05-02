@@ -8,7 +8,7 @@
 
 ## Introduction
 
-A short description of what the feature is. Try to keep it to a single-paragraph "elevator pitch" so the reader understands what problem this proposal is addressing.
+We'd like to propose to "get SDL out of the container" and take the integration with the host IVI system even further. 
 
 ## Motivation
 
@@ -16,9 +16,12 @@ Describe the problems that this proposal seeks to address. If the problem is tha
 
 ## Proposed solution
 
-Describe your solution to the problem. Provide examples and describe how they work. Show how your solution is better than current workarounds: is it cleaner, safer, or more efficient? Use subsections if necessary.
 
-Describe the design of the solution in detail. Use subsections to describe various details. If it involves new protocol changes or RPC changes, show the full XML of all changes and how they changed. Show documentation comments detailing what it does. Show how it might be implemented on the Mobile Library and Core. The detail in this section should be sufficient for someone who is *not* one of the authors to be able to reasonably implement the feature and future [smartdevicelink.com](https://www.smartdevicelink.com) guides.
+One important difference between a CarPlay-like approach and SDL lies in SDL's ability to actually integrate with the host IVI system. Instead of just providing access to the full screen or a part of it, SDL is an integrated part of the IVI's feature set.
+
+Currently, however, "apps" are still the main entry point to functionality, meaning the user first has to select the app from the apps list and then trigger a function from within the "app's area" within the HMI. 
+
+We'd like to propose to "get SDL out of the container" and integrate with the host IVI system even further. This could be considered a paradigm shift from an "apps-based approach" to a "function-based approach".
 
 ## Potential downsides
 
